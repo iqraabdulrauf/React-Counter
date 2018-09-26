@@ -1,16 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
 //Stateless functional component
-const Navbar = ({totalCounter}) => {
-
+const Navbar = ({totalCounterActive,ontotalCounts}) => {
+ 
+ 
         return ( 
           <nav className="navbar navbar-light bg-light " >
            <a className="navbar-brand" href="#">
-           Counters 
+           Active Counters 
            <span className="badge badge-pill badge-secondary m-4">
-           {totalCounter}
+           {totalCounterActive}
            </span>
+           Total Counts 
+           <span  className="badge badge-pill badge-secondary m-3"
+            >{ontotalCounts}
+           </span>
+           
+           
+          
            </a>
            </nav>
          );

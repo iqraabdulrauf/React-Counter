@@ -4,6 +4,10 @@ import './App.css';
 import Counters from './components/counters';
 class App extends Component {
 
+  // constructor(props) {
+  //   super(props);
+  //   this.totalCounts = this.totalCounts.bind(this);
+  // }
   state = { 
     counters : [
         {id :1 , value :0},
@@ -34,12 +38,22 @@ class App extends Component {
      const counters = this.state.counters.filter(c => c.id !== counterID);
      this.setState({counters});
    };
-   
+  //  totalCounts = () =>
+  //  {
+  //    fo
+  //  };
   render() {
     return (
       <React.Fragment>
       <Navbar  
-      totalCounter={this.state.counters.filter(c => c.value > 0).length }>
+      totalCounterActive={this.state.counters.filter(c => c.value > 0).length }
+      ontotalCounts={
+        this.state.counters[0].value +
+        this.state.counters[1].value +
+        this.state.counters[2].value +
+        this.state.counters[3].value}>
+     
+      
       </Navbar>
       <main className="container">
       <Counters  

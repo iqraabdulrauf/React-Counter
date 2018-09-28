@@ -2,7 +2,7 @@ import React from 'react';
 
 
 //Stateless functional component
-const Navbar = ({totalCounterActive,ontotalCounts}) => {
+const Navbar = ({totalCounterActive, ontotalCounts,counters}) => {
  
  
         return ( 
@@ -14,11 +14,9 @@ const Navbar = ({totalCounterActive,ontotalCounts}) => {
            </span>
            Total Counts 
            <span  className="badge badge-pill badge-secondary m-3"
-            >{ontotalCounts}
+            > {ontotalCounts}
            </span>
            
-           
-          
            </a>
            </nav>
          );
